@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Spotify - Scatolove</title>
+</head>
+
+<body>
+    <section id="player" class="gap-20px">
+        <div class="player-musica">
+            <h3 class="underline">Fade To Black - Remastered</h3>
+            <img width="16" height="16" src="./img/icones/heart-icon.svg" title="Remover da sua biblioteca">
+            <p class="texto-12px underline">Metallica</p>
+        </div>
+
+        <div>
+            <div class="controladores-player flex gap-20px">
+                <img width="20" height="20" src="./img/icones/shuffle.svg" title="Ativar a ordem aleatória">
+                <img width="24" height="24" src="./img/icones/backward.svg" title="Voltar">
+                <img width="32" height="32" src="./img/icones/circle-play-white.svg" title="Play">
+                <img width="24" height="24" src="./img/icones/forward.svg" title="Avançar">
+                <img width="20" height="20" src="./img/icones/repeat.svg" title="Repetir">
+            </div>
+            <div class="barra-de-reproducao texto-12px flex gap-10px">
+                <div class="progresso"></div>
+                <div class="progresso-bg"></div>
+            </div>
+        </div>
+
+        <div class="controladores-direita flex gap-10px">
+            <img class="icon" src="./img/icones/lyrics.svg" title="Letra">
+            <img class="icon" src="./img/icones/queue.svg" title="Fila">
+            <img class="icon" src="./img/icones/device.svg" title="Conectar a um dispositivo">
+            <img src="./img/icones/volume.svg" title="Mudo">
+            <div class="barra-de-volume">
+                <div class="volume"></div>
+                <div class="volume-bg"></div>
+            </div>
+            <img src="./img/icones/full-screen.svg" title="Tela Cheia">
+        </div>
+    </section>
+
+    <section id="menu-lateral" class="gap-20px">
+        <img width="120" src="./img/icones/spotify-logo-white.png" alt="Spotify logo">
+        <div style="margin-top: 15px;" class="flex gap-20px">
+            <img width="24" src="./img/icones/icone-inicio.svg" alt="Início">
+            <p>Início</p>
+        </div>
+        <div class="flex gap-20px">
+            <img width="24" src="./img/icones/icone-buscar.svg" alt="Buscar">
+            <p>Buscar</p>
+        </div>
+        <div class="flex gap-20px">
+            <img width="24" src="./img/icones/icone-biblioteca.svg" alt="Biblioteca">
+            <p>Sua Biblioteca</p>
+        </div>
+        <div class="flex gap-20px" style="margin-top: 20px;">
+            <img width="24" style="border-radius: 2px;" src="./img/icones/criar-playlist.svg" alt="Criar playlist">
+            <p>Criar Playlist</p>
+        </div>
+        <div class="flex gap-20px">
+            <div class="curtidas-icone-bg"><img src="./img/icones/heart-solid.svg" alt="Músicas curtidas"></div>
+            <p>Músicas Curtidas</p>
+        </div>
+
+        <hr>
+
+        <ul>
+            <li class="playlist-link">rock rural</li>
+            <li class="playlist-link">BOTA UM MODÃO PRO TIO</li>
+            <li class="playlist-link">NÃO É SÓ UMA FASE!!!</li>
+            <li class="playlist-link">a piece of existence</li>
+            <li class="playlist-link">Chill</li>
+            <li class="playlist-link">churras na laje</li>
+        </ul>
+        <div>
+            <img class="player-img" src="./img/discografia/fade-to-black.webp" alt="Capa do Single 'Fade To Black'">
+            <div class="minimizar">
+                <img width="30" src="./img/icones/minimizar.svg" alt="Minimizar">
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <header id="header" class="flex">
+            <div class="header-botoes" style="display: flex;">
+                <img src="./img/icones/Voltar.svg" title="Voltar">
+                <img src="./img/icones/Avancar.svg" title="Avançar">
+                <img src="./img/icones/circle-play-green.svg" title="Play">
+                <h2>Scatolove</h2>
+            </div>
+            <div class="perfil flex gap-10px">
+                <img src="./img/perfis/foto-perfil.png" alt="Foto de perfil">
+                <h3>Naspolini</h3>
+                <img src="./img/icones/drop-down.svg" title="Abrir menu">
+            </div>
+        </header>
+
+        <section id="pagina-artista">
+            <div class="musicas-populares">
+                <!-- <h2>Populares</h2> -->
+                <div class="lista-de-musicas">
+                    <div class="flex">
+                        <div class="flex gap-20px">
+                            <h4>5</h4>
+                            <img src="./img/discografia/lei-de-muffin.webp" alt="Capa do álbum 'Lei de Muffin'">
+                            <h4 style="color: var(--cor1);">Inbox</h4>
+                        </div>
+                        <h3>1.811.336</h3>
+                        <div class="flex gap-20px"><img class="coracao-icon" src="./img/icones/heart-icon.svg" title="Remover da sua biblioteca">
+                            <h4>3:12</h4>
+                        </div>
+
+                    </div>
+                    <p>VER MAIS</p>
+                </div>
+            </div>
+
+            <div id="discografia" class="flex">
+                <h2 class="underline">Discografia</h2>
+                <p class="underline">VER TUDO</p>
+            </div>
+            <div>
+                <button>Lançamentos populares</button>
+                <button>Álbuns</button>
+                <button>Singles e EPs</button>
+            </div>
+            <div class="grid gap-20px">
+                <div class="cover">
+                    <img src="./img/discografia/entupir-de-brabuletas.jpg" alt="Capa do single 'Entupir de Brabuletas'">
+                    <h3>Entupir de Brabuletas</h3>
+                    <span>2020 • Single</span>
+                </div>
+                <div class="cover">
+                    <img src="./img/discografia/o-tiro.jfif" alt="Capa do single 'O Tiro'">
+                    <h3>O Tiro</h3>
+                    <span>2020 • Single</span>
+                </div>
+                <div class="cover">
+                    <img src="./img/discografia/cavalice-no-pais-das-maravilhas.webp" alt="Capa do single 'Cavalice no País das Maravilhas'">
+                    <h3>Cavalice no País das Maravilhas - Episódio 1</h3>
+                    <span>2020 • Single</span>
+                </div>
+                <div class="cover">
+                    <img src="./img/discografia/nada-de-bom-acontece-de-madrugada.jpg" alt="Capa do single 'Nada de Bom Acontece de Madrugada'">
+                    <h3>Nada de Bom Acontece de Madrugada</h3>
+                    <span>2020 • Single</span>
+                </div>
+                <div class="cover">
+                    <img src="./img/discografia/lei-de-muffin.webp" alt="Capa do álbum 'Lei de Muffin'">
+                    <h3>Lei de Muffin</h3>
+                    <span>2018 • Álbum</span>
+                </div>
+                <div class="cover">
+                    <img src="./img/discografia/soneca.jpg" alt="Capa do single 'Soneca'">
+                    <h3>Soneca</h3>
+                    <span>2020 • Single</span>
+                </div>
+                <!-- <div class="cover">
+                    <img src="./img/discografia/inbox-.jpg" alt="Capa do single 'Inbox'">
+                    <h3>Inbox</h3>
+                    <span>2018 • Single</span>
+                </div> -->
+            </div>
+
+            <div class="flex fas-curtem">
+                <h2 class="underline">Os fãs também curtem</h2>
+                <p class="underline">VER TUDO</p>
+            </div>
+            <div class="grid gap-20px">
+                <div class="cover">
+                    <img src="./img/perfis/topaz.jpg" alt="Perfil artista 'Tópaz'">
+                    <h3>Tópaz</h3>
+                    <span>Artista</span>
+                </div>
+                <div class="cover">
+                    <img src="./img/perfis/zimbra.jpg" alt="Perfil artista 'Zimbra'">
+                    <h3>Zimbra</h3>
+                    <span>Artista</span>
+                </div>
+                <div class="cover">
+                    <img src="./img/perfis/versalle.jpg" alt="Perfil artista 'Versalle'">
+                    <h3>Versalle</h3>
+                    <span>Artista</span>
+                </div>
+                <div class="cover">
+                    <img src="./img/perfis/codinome-winchester.jpg" alt="Perfil artista 'Codinome Winchester'">
+                    <h3>Codinome Winchester</h3>
+                    <span>Artista</span>
+                </div>
+                <div class="cover">
+                    <img src="./img/perfis/projeto-rivera.jpg" alt="Perfil artista 'Projeto Rivera'">
+                    <h3>Projeto Rivera</h3>
+                    <span>Artista</span>
+                </div>
+                <div class="cover">
+                    <img src="./img/perfis/plutao-ja-foi-planeta.jpg" alt="Perfil artista 'Plutão Já Foi Planeta'">
+                    <h3>Plutão Já Foi Planeta</h3>
+                    <span>Artista</span>
+                </div>
+                <!-- <div class="cover">
+                    <img src="./img/perfis/far-from-alaska.jpg" alt="Perfil artista 'Far From Alaska'">
+                    <h3>Far From Alaska</h3>
+                    <span>Artista</span>
+                </div> -->
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>

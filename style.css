@@ -1,0 +1,452 @@
+:root {
+    --texto2: 0.875rem;
+    --texto3: 0.8125rem;
+    --texto4: 0.75rem;
+    --cor1: #f1f1f1;
+    --cor2: #a8a8a8;
+    --cor3: #959595;
+    --cor4: #6e6e6e;
+    --cor5: #282828;
+    --cor6: #202020;
+    --cor7: #181818;
+    --cor8: #121212;
+    --cor9: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    overflow: hidden;
+    background-color: var(--cor8);
+    cursor: default;
+}
+
+/* GLOBAIS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    padding-left: 0;
+}
+
+h2 {
+    font-size: var(--texto1);
+    color: var(--cor1);
+    margin: 20px 0;
+}
+
+h3 {
+    color: var(--cor1);
+    font-size: var(--texto2);
+    font-weight: 500;
+}
+
+.texto-12px {
+    font-size: var(--texto4);
+    color: var(--cor3);
+    font-weight: 500;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.gap-20px {
+    gap: 20px;
+}
+
+.gap-10px {
+    gap: 10px;
+}
+
+p, 
+.cover h3, 
+li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.underline:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* PLAYER */
+#player {
+    position: fixed;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    justify-content: center;
+    border-top: 1px solid var(--cor6);
+    background-color: var(--cor7);
+    height: 70px;
+    width: 100vw;
+    padding: 10px 15px;
+    z-index: 3;
+}
+
+.player-musica {
+    gap: 0px 25px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.player-musica img {
+    grid-area: 1 / 2 / span 2 / 2;
+}
+
+.controladores-player {
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.barra-de-reproducao {
+    height: 4px;
+    border-radius: 20px;
+    width: 75%;
+    margin: auto;
+}
+
+.barra-de-reproducao::before {
+    content: "0:41";
+    margin-left: -30px;
+}
+
+.barra-de-reproducao::after {
+    content: "6:57";
+}
+
+.progresso {
+    border-radius: 20px;
+    height: 4px;
+    background-color: var(--cor2);
+    position: absolute;
+    width: 7.3vw;
+}
+
+.progresso-bg {
+    border-radius: 20px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--cor4);
+}
+
+.controladores-direita {
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.controladores-direita img {
+    width: 20px;
+}
+
+.barra-de-volume {
+    border-radius: 20px;
+    height: 4px;
+    width: 30%;
+}
+
+.volume {
+    border-radius: 20px;
+    height: 4px;
+    background-color: var(--cor2);
+    position: absolute;
+    width: 3vw;
+}
+
+.volume-bg {
+    border-radius: 20px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--cor4);
+}
+
+/* MENU */
+#menu-lateral {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: var(--cor9);
+    color: var(--cor2);
+    font-size: var(--texto3);
+    font-weight: 600;
+    height: 100vh;
+}
+
+.playlist-link {
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.curtidas-icone-bg {
+    background: linear-gradient(135deg, #450af5, #c4efd9);
+    border-radius: 2px;
+    width: 24px;
+    height: 24px;
+}
+.curtidas-icone-bg img {
+    width: 12px;
+    margin: 6.3px;
+}
+
+.player-img {
+    position: fixed;
+    width: 220px;
+    bottom: 91px;
+    left: 0;
+    border-radius: 0;
+}
+
+.minimizar {
+    position: fixed;
+    bottom: 272px;
+    left: 183px;
+    opacity: .7;
+    z-index: 3;
+    width: 20px;
+    display: none;
+}
+
+.player-img:hover + .minimizar{
+    display: block;
+}
+
+hr {
+    border-color: var(--cor6);
+}
+
+#menu-lateral p:hover,
+.playlist-link:hover,
+.lista-de-musicas p:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+/* HEADER */
+#header {
+    height: 55px;
+    justify-content: space-between;
+    padding: 5px 30px;
+    background-color: #634d42;
+}
+
+.header-botoes img {
+    width: 32px;
+    margin-right: 15px;
+}
+
+.header-botoes img:nth-child(3) {
+    width: 48px;
+}
+
+.header-botoes img:nth-child(1),
+.header-botoes img:nth-child(2) {
+    cursor: not-allowed;
+}
+
+.header-botoes img:nth-child(3):hover,
+.controladores-player img:nth-child(3):hover {
+    transform: scale(1.06);
+}
+
+.perfil {
+    background-color: #1f1615;
+    padding: 2px 10px 2px 2px;
+    border-radius: 50px;
+    justify-content: center;
+}
+
+.perfil img {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+}
+
+.perfil h3 {
+    color: var(--cor1);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.perfil img:last-child {
+    width: 10px;
+}
+
+.perfil:hover {
+    background-color: #2b1f1e;
+}
+
+/* PAGINA DO ARTISTA */
+#pagina-artista {
+    padding: 0px 30px;
+}
+
+.musicas-populares {
+    color: var(--cor1);
+    font-size: var(--texto2);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.lista-de-musicas img {
+    border-radius: 0;
+    width: 40px;
+}
+
+.lista-de-musicas > div {
+    width: 95%;
+    color: var(--cor2);
+    margin: 0 auto;
+    height: 40px;
+    padding: 6px 15px;
+    border-radius: 3px;
+    justify-content: space-between;
+}
+
+.lista-de-musicas h3 {
+    color: var(--cor2);
+    font-weight: bold;
+    width: 30%;
+    text-align: right;
+}
+
+.lista-de-musicas p {
+    margin: 20px;
+}
+
+.coracao-icon {
+    width: 16px !important;
+    margin-right: 15px;
+}
+
+/* DISCOGRAFIA */
+#discografia,
+.fas-curtem {
+    justify-content: space-between;
+}
+
+#discografia p,
+.musicas-populares p,
+.fas-curtem p {
+    color: var(--cor2);
+    font-family: "Montserrat", sans-serif;
+    font-size: var(--texto4);
+    font-weight: bolder;
+}
+
+button {
+    color: var(--cor1);
+    font-weight: bold;
+    font-size: var(--texto2);
+    margin-bottom: 20px;
+    background-color: var(--cor6);
+    padding: 8px 13px;
+    border: none;
+    border-radius: 50px;
+    margin-right: 3px;
+}
+
+button:first-child {
+    background-color: #fff;
+    color: var(--cor9);
+    font-weight: normal;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-rows: 1fr;
+    overflow-y: hidden;
+    grid-auto-rows: 0;
+    gap: 25px;
+}
+
+.cover {
+    position: relative;
+    padding: 15px 15px 30px;
+    background-color: var(--cor7);
+    border-radius: 5px;
+}
+
+.cover img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+div.grid:last-child img {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+div.grid:last-child{
+    margin-bottom: 90px;
+}
+
+.cover h3 {
+    margin-bottom: 5px;
+    font-size: var(--texto2);
+    font-weight: bold;
+}
+
+.cover span {
+    color: var(--cor2);
+    font-weight: 500;
+    font-size: var(--texto3);
+}
+
+.cover:after {
+    position: absolute;
+    content: " ";
+    background-image: url(./img/icones/circle-play-green.svg);
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+    right: 23px;
+    bottom: 95px;
+    display: none;
+    box-shadow: 0px 3px 5px 1px #30303063 ;
+    border-radius: 50%;
+}
+
+.cover:hover:after {
+    display: block;
+}
+
+@media (max-width: 859px) {
+    .grid {
+        grid-template-rows: 1fr 1fr;
+    }
+    .controladores-direita {
+        gap: 8px !important;
+    }
+    .controladores-direita div {
+        display: none;
+    }
+}
+
+.cover:hover,
+.lista-de-musicas div:hover,
+button:nth-child(2):hover,
+button:nth-child(3):hover {
+    background-color: var(--cor5);
+}
+
+.cover:hover,
+.player-img:hover{
+    cursor: pointer;
+}
