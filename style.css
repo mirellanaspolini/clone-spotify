@@ -66,8 +66,8 @@ h3 {
     gap: 10px;
 }
 
-p, 
-.cover h3, 
+p,
+.cover h3,
 li {
     white-space: nowrap;
     overflow: hidden;
@@ -120,15 +120,6 @@ li {
     margin: auto;
 }
 
-.barra-de-reproducao::before {
-    content: "0:41";
-    margin-left: -30px;
-}
-
-.barra-de-reproducao::after {
-    content: "6:57";
-}
-
 .progresso {
     border-radius: 20px;
     height: 4px;
@@ -138,10 +129,25 @@ li {
 }
 
 .progresso-bg {
+    position: relative;
     border-radius: 20px;
     width: 100%;
     height: 4px;
     background-color: var(--cor4);
+}
+
+.progresso-bg::before {
+    position: absolute;
+    content: "0:41";
+    left: -30px;
+    top: calc(50% - 8px);
+}
+
+.progresso-bg::after {
+    position: absolute;
+    content: "6:57";
+    right: -30px;
+    top: calc(50% - 8px);
 }
 
 .controladores-direita {
@@ -214,13 +220,13 @@ li {
     position: fixed;
     bottom: 272px;
     left: 183px;
-    opacity: .7;
+    opacity: 0.7;
     z-index: 3;
     width: 20px;
     display: none;
 }
 
-.player-img:hover + .minimizar{
+.player-img:hover + .minimizar {
     display: block;
 }
 
@@ -393,7 +399,7 @@ div.grid:last-child img {
     margin-bottom: 10px;
 }
 
-div.grid:last-child{
+div.grid:last-child {
     margin-bottom: 90px;
 }
 
@@ -419,7 +425,7 @@ div.grid:last-child{
     right: 23px;
     bottom: 95px;
     display: none;
-    box-shadow: 0px 3px 5px 1px #30303063 ;
+    box-shadow: 0px 3px 5px 1px #30303063;
     border-radius: 50%;
 }
 
@@ -447,6 +453,6 @@ button:nth-child(3):hover {
 }
 
 .cover:hover,
-.player-img:hover{
+.player-img:hover {
     cursor: pointer;
 }
