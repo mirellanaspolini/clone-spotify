@@ -14,13 +14,13 @@
 }
 
 body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
     display: grid;
     grid-template-columns: 220px 1fr;
-    overflow: hidden;
+    margin: 0;
     background-color: var(--cor8);
+    font-family: "Montserrat", sans-serif;
     cursor: default;
+    overflow: hidden;
 }
 
 /* GLOBAIS */
@@ -31,26 +31,26 @@ body {
 
 ul,
 li {
-    list-style: none;
     padding-left: 0;
+    list-style: none;
 }
 
 h2 {
+    margin: 1.25rem 0;
     font-size: var(--texto1);
     color: var(--cor1);
-    margin: 20px 0;
 }
 
 h3 {
-    color: var(--cor1);
     font-size: var(--texto2);
     font-weight: 500;
+    color: var(--cor1);
 }
 
 .texto-12px {
     font-size: var(--texto4);
-    color: var(--cor3);
     font-weight: 500;
+    color: var(--cor3);
 }
 
 .flex {
@@ -59,7 +59,7 @@ h3 {
 }
 
 .gap-20px {
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .gap-10px {
@@ -69,9 +69,9 @@ h3 {
 p,
 .cover h3,
 li {
+    text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .underline:hover {
@@ -86,22 +86,22 @@ li {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
-    white-space: nowrap;
-    overflow: hidden;
     justify-content: center;
+    height: 4.375rem;
+    width: 100vw;
+    padding: 10px 1rem;
     border-top: 1px solid var(--cor6);
     background-color: var(--cor7);
-    height: 70px;
-    width: 100vw;
-    padding: 10px 15px;
+    overflow: hidden;
+    white-space: nowrap;
     z-index: 3;
 }
 
 .player-musica {
-    gap: 0px 25px;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
+    gap: 0px 1.5625rem;
 }
 
 .player-musica img {
@@ -110,73 +110,73 @@ li {
 
 .controladores-player {
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
 }
 
 .barra-de-reproducao {
-    height: 4px;
-    border-radius: 20px;
     width: 75%;
+    height: 4px;
     margin: auto;
+    border-radius: 1.25rem;
 }
 
 .progresso {
-    border-radius: 20px;
-    height: 4px;
-    background-color: var(--cor2);
     position: absolute;
     width: 7.3vw;
+    height: 4px;
+    border-radius: 1.25rem;
+    background-color: var(--cor2);
 }
 
 .progresso-bg {
     position: relative;
-    border-radius: 20px;
     width: 100%;
     height: 4px;
+    border-radius: 1.25rem;
     background-color: var(--cor4);
 }
 
 .progresso-bg::before {
-    position: absolute;
     content: "0:41";
-    left: -30px;
+    position: absolute;
     top: calc(50% - 8px);
+    left: -1.875rem;
 }
 
 .progresso-bg::after {
-    position: absolute;
     content: "6:57";
-    right: -30px;
+    position: absolute;
     top: calc(50% - 8px);
+    right: -1.875rem;
 }
 
 .controladores-direita {
     justify-content: center;
-    margin-right: 20px;
+    margin-right: 1.25rem;
 }
 
 .controladores-direita img {
-    width: 20px;
+    width: 1.25rem;
 }
 
 .barra-de-volume {
-    border-radius: 20px;
-    height: 4px;
     width: 30%;
+    height: 4px;
+    border-radius: 1.25rem;
 }
 
 .volume {
-    border-radius: 20px;
-    height: 4px;
-    background-color: var(--cor2);
     position: absolute;
     width: 3vw;
+    height: 4px;
+    border-radius: 1.25rem;
+    background-color: var(--cor2);
 }
 
 .volume-bg {
-    border-radius: 20px;
     width: 100%;
     height: 4px;
+    border-radius: 1.25rem;
     background-color: var(--cor4);
 }
 
@@ -184,24 +184,24 @@ li {
 #menu-lateral {
     display: flex;
     flex-direction: column;
+    height: 100vh;
     padding: 25px;
-    background-color: var(--cor9);
-    color: var(--cor2);
     font-size: var(--texto3);
     font-weight: 600;
-    height: 100vh;
+    color: var(--cor2);
+    background-color: var(--cor9);
 }
 
 .playlist-link {
+    margin-bottom: 1.25rem;
     font-weight: normal;
-    margin-bottom: 20px;
 }
 
 .curtidas-icone-bg {
-    background: linear-gradient(135deg, #450af5, #c4efd9);
-    border-radius: 2px;
     width: 24px;
     height: 24px;
+    border-radius: 2px;
+    background: linear-gradient(135deg, #450af5, #c4efd9);
 }
 .curtidas-icone-bg img {
     width: 12px;
@@ -210,20 +210,20 @@ li {
 
 .player-img {
     position: fixed;
-    width: 220px;
     bottom: 91px;
     left: 0;
+    width: 220px;
     border-radius: 0;
 }
 
 .minimizar {
+    display: none;
     position: fixed;
     bottom: 272px;
     left: 183px;
+    width: 1.25rem;
     opacity: 0.7;
     z-index: 3;
-    width: 20px;
-    display: none;
 }
 
 .player-img:hover + .minimizar {
@@ -237,21 +237,21 @@ hr {
 #menu-lateral p:hover,
 .playlist-link:hover,
 .lista-de-musicas p:hover {
-    cursor: pointer;
     color: #fff;
+    cursor: pointer;
 }
 
 /* HEADER */
 #header {
-    height: 55px;
     justify-content: space-between;
-    padding: 5px 30px;
+    height: 55px;
+    padding: 5px 1.875rem;
     background-color: #634d42;
 }
 
 .header-botoes img {
     width: 32px;
-    margin-right: 15px;
+    margin-right: 0.9375rem;
 }
 
 .header-botoes img:nth-child(3) {
@@ -269,21 +269,21 @@ hr {
 }
 
 .perfil {
-    background-color: #1f1615;
-    padding: 2px 10px 2px 2px;
-    border-radius: 50px;
     justify-content: center;
+    padding: 2px 10px 2px 2px;
+    border-radius: 3rem;
+    background-color: #1f1615;
 }
 
 .perfil img {
+    width: 1.75rem;
+    height: 1.75rem;
     border-radius: 50%;
-    width: 28px;
-    height: 28px;
 }
 
 .perfil h3 {
     color: var(--cor1);
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: bold;
 }
 
@@ -297,7 +297,7 @@ hr {
 
 /* PAGINA DO ARTISTA */
 #pagina-artista {
-    padding: 0px 30px;
+    padding: 0rem 1.875rem;
 }
 
 .musicas-populares {
@@ -307,34 +307,34 @@ hr {
 }
 
 .lista-de-musicas img {
+    width: 2.5rem;
     border-radius: 0;
-    width: 40px;
 }
 
 .lista-de-musicas > div {
-    width: 95%;
-    color: var(--cor2);
-    margin: 0 auto;
-    height: 40px;
-    padding: 6px 15px;
-    border-radius: 3px;
     justify-content: space-between;
+    width: 95%;
+    height: 2.5rem;
+    margin: 0 auto;
+    padding: 6px 1rem;
+    border-radius: 3px;
+    color: var(--cor2);
 }
 
 .lista-de-musicas h3 {
-    color: var(--cor2);
-    font-weight: bold;
     width: 30%;
     text-align: right;
+    font-weight: bold;
+    color: var(--cor2);
 }
 
 .lista-de-musicas p {
-    margin: 20px;
+    margin: 1.25rem;
 }
 
 .coracao-icon {
-    width: 16px !important;
-    margin-right: 15px;
+    width: 1rem !important;
+    margin-right: 1rem;
 }
 
 /* DISCOGRAFIA */
@@ -346,61 +346,61 @@ hr {
 #discografia p,
 .musicas-populares p,
 .fas-curtem p {
-    color: var(--cor2);
     font-family: "Montserrat", sans-serif;
     font-size: var(--texto4);
     font-weight: bolder;
+    color: var(--cor2);
 }
 
 button {
-    color: var(--cor1);
-    font-weight: bold;
-    font-size: var(--texto2);
-    margin-bottom: 20px;
-    background-color: var(--cor6);
     padding: 8px 13px;
-    border: none;
-    border-radius: 50px;
     margin-right: 3px;
+    margin-bottom: 1.25rem;
+    font-size: var(--texto2);
+    font-weight: bold;
+    color: var(--cor1);
+    border: none;
+    border-radius: 3.125rem;
+    background-color: var(--cor6);
 }
 
 button:first-child {
-    background-color: #fff;
-    color: var(--cor9);
     font-weight: normal;
+    color: var(--cor9);
+    background-color: #fff;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
     grid-template-rows: 1fr;
-    overflow-y: hidden;
     grid-auto-rows: 0;
-    gap: 25px;
+    gap: 1.5625rem;
+    overflow-y: hidden;
 }
 
 .cover {
     position: relative;
-    padding: 15px 15px 30px;
-    background-color: var(--cor7);
+    padding: 0.9375rem 0.9375rem 1.875rem;
     border-radius: 5px;
+    background-color: var(--cor7);
 }
 
 .cover img {
     width: 100%;
-    border-radius: 5px;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 div.grid:last-child img {
-    border-radius: 50%;
     width: 100%;
     height: auto;
     margin-bottom: 10px;
+    border-radius: 50%;
 }
 
 div.grid:last-child {
-    margin-bottom: 90px;
+    margin-bottom: 5.625rem;
 }
 
 .cover h3 {
@@ -416,17 +416,17 @@ div.grid:last-child {
 }
 
 .cover:after {
-    position: absolute;
     content: " ";
+    position: absolute;
+    right: 1.4375rem;
+    bottom: 5.9375rem;
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    box-shadow: 0px 3px 5px 1px #30303063;
     background-image: url(./img/icones/circle-play-green.svg);
     background-size: cover;
-    width: 48px;
-    height: 48px;
-    right: 23px;
-    bottom: 95px;
-    display: none;
-    box-shadow: 0px 3px 5px 1px #30303063;
-    border-radius: 50%;
 }
 
 .cover:hover:after {
